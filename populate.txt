@@ -1,0 +1,76 @@
+mysql -u root -p --local_infile
+
+USE bucees;
+
+SET GLOBAL local_infile = 1;
+SET SQL_SAFE_UPDATES = 0;
+SET FOREIGN_KEY_CHECKS = 0;
+
+LOAD DATA LOCAL INFILE 'C:/Users/ethan/Documents/csc430/project/bucees_data/ticket.csv'
+REPLACE INTO TABLE ticket
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY ''
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE 'C:/Users/ethan/Documents/csc430/project/bucees_data/customer.csv'
+REPLACE INTO TABLE customer
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY ''
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE 'C:/Users/ethan/Documents/csc430/project/bucees_data/dessert.csv'
+REPLACE INTO TABLE dessert
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY ''
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE 'C:/Users/ethan/Documents/csc430/project/bucees_data/drink.csv'
+REPLACE INTO TABLE drink
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY ''
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE 'C:/Users/ethan/Documents/csc430/project/bucees_data/employee.csv'
+REPLACE INTO TABLE employee
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY ''
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE 'C:/Users/ethan/Documents/csc430/project/bucees_data/food.csv'
+REPLACE INTO TABLE food
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY ''
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE 'C:/Users/ethan/Documents/csc430/project/bucees_data/jerky.csv'
+REPLACE INTO TABLE jerky
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY ''
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE 'C:/Users/ethan/Documents/csc430/project/bucees_data/sale.csv'
+REPLACE INTO TABLE sale
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY ''
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE 'C:/Users/ethan/Documents/csc430/project/bucees_data/sandwich.csv'
+REPLACE INTO TABLE sandwich
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY ''
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE 'C:/Users/ethan/Documents/csc430/project/bucees_data/sandwich_meat.csv'
+REPLACE INTO TABLE sandwich_meat
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY ''
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE 'C:/Users/ethan/Documents/csc430/project/bucees_data/shift.csv'
+REPLACE INTO TABLE shift
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY ''
+LINES TERMINATED BY '\n';
+
+SET SQL_SAFE_UPDATES = 1;
+SET FOREIGN_KEY_CHECKS = 1;
